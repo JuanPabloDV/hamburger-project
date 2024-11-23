@@ -52,7 +52,7 @@ export default {
     },
     methods: {
         async getPedidos() {
-            const req = await fetch("http://localhost:3000/burgers");
+            const req = await fetch("http://localhost:4000/burgers");
             const data = await req.json();
             this.burgers = data;
 
@@ -61,13 +61,13 @@ export default {
         },
 
         async getStatus() {
-            const req = await fetch("http://localhost:3000/status");
+            const req = await fetch("http://localhost:4000/status");
             const data = await req.json();
             this.status = data;
         },
 
         async deleteHamburger(id) {
-            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+            const req = await fetch(`http://localhost:4000/burgers/${id}`, {
                 method: "DELETE"
             });
 
@@ -86,7 +86,7 @@ export default {
             const option = event.target.value;
             const data = JSON.stringify({ status: option });
 
-            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+            const req = await fetch(`http://localhost:4000/burgers/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"

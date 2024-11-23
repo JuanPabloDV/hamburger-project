@@ -78,7 +78,7 @@ export default {
     },
     methods: {
         async getIngredientes() {
-            const req = await fetch("http://localhost:3000/ingredientes");
+            const req = await fetch("http://localhost:4000/ingredientes");
             const data = await req.json();
             this.paes = data.paes;
             this.carnes = data.carnes;
@@ -86,7 +86,7 @@ export default {
         },
         async getMaxId() {
             // Busca o maior id
-            const res = await fetch("http://localhost:3000/burgers");
+            const res = await fetch("http://localhost:4000/burgers");
             const data = await res.json();
             return data.length > 0 ? Math.max(...data.map(burger => burger.id)) : 0;
         },
@@ -104,7 +104,7 @@ export default {
                 status: "Solicitado",
             };
 
-            const req = await fetch("http://localhost:3000/burgers", {
+            const req = await fetch("http://localhost:4000/burgers", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
