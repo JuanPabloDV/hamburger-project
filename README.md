@@ -67,10 +67,3 @@ Após rodar ambos os servidores (Vue e JSON Server), acesse o front-end no naveg
 - O consumo da API funciona apenas localmente, já que o **JSON Server** está configurado para rodar de forma local.
 - As funcionalidades permitem que você crie pedidos, edite o status, exclua pedidos e visualize os pedidos já realizados.
 
-## Contribuição
-
-Se você quiser contribuir para este projeto, fique à vontade para abrir uma **Pull Request** ou **Issue**.
-
----
-
-Feito com ❤️ por [Seu Nome].
